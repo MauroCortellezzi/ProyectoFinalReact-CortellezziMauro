@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { useEffect, useState } from "react"
-import { mFetch } from "../../utils/mFetch"
+
 import Loading from "../Loading/Loading"
 import {getDoc, doc, getFirestore} from "firebase/firestore"
 
@@ -10,7 +10,7 @@ export const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({})
   const [isLoading, setIsLoading] = useState(true)
 
-    // estado para guardar un producto
+    
 const {pid} = useParams()
 
   useEffect(()=>{

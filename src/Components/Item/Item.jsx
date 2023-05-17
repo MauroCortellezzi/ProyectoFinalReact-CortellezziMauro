@@ -16,9 +16,7 @@ const Item = memo(
                           <label>Precio: {price}</label>
                           <label>Categoria: {categoria}</label>
                       </div>
-                      {/* <div className="card-footer">
-                                           <button className="btn btn-outline-dark">Detalle</button>
-                                         </div> */}
+                    
                   </div>
     )
   }

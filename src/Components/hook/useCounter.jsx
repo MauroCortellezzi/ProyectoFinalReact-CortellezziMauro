@@ -1,6 +1,6 @@
 import { useState } from "react"
 
- export const useCounter = (initial = 0, min, max) =>{ //custom hook
+ export const useCounter = (initial = 0, min, max) =>{ 
     const [counter, setCounter] = useState (initial)
 
     let handleSumar = () =>{

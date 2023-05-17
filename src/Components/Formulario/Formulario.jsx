@@ -14,8 +14,7 @@ export function Formulario() {
 
 
     const handleOnChange = (evt) => {
-        // console.log("name: ", evt.target.value)
-        // console.log("value: ", evt.target.value)
+      
         setFormData({
             ...formData,
             [evt.target.name]: evt.target.value

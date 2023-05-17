@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useCartContext } from "../../context/CartContext"
-import { writeBatch, updateDoc, doc, addDoc, collection, getFirestore } from "firebase/firestore"
+import { addDoc, collection, getFirestore } from "firebase/firestore"
 import {Link} from "react-router-dom"
 
 export const CartContainer = () => {
@@ -22,12 +22,12 @@ export const CartContainer = () => {
     order.total = precioTotal()
     console.log(order)
 
-    // insertar la orden a firebase
+    
     const dbFirestore = getFirestore()
     const ordersCollection = collection(dbFirestore, 'orders')
 
     addDoc(ordersCollection, order)
-      // .then(resp => alert(`id de la compra: ${resp.id}`))
+      
       .then(resp => setId(resp.id))
       .catch(err=> console.log(err))
       .finally(()=>{

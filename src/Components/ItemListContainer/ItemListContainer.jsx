@@ -10,8 +10,6 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  
-
   const { categoria } = useParams()
 
   console.log(categoria)
@@ -42,8 +40,8 @@ const ItemListContainer = ({ greeting }) => {
 
 
 
-  console.log(productos)
-  //map
+  
+
   return (
     <>
 
